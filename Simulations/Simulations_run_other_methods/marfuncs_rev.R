@@ -318,7 +318,7 @@ dosims=function(truebeta,mcar,misspec,nsim=1000,nx=1000){
         miri <- rep(NA, length(sims))
 
         
-  #add mse: NB 6/10/2019
+  #mse: 6/10/2019
   mse=matrix(NA,nrow=length(sims),ncol=7)
   
 	#do each scenario length(sims) number of times (usually 1000)
@@ -510,11 +510,8 @@ dosims=function(truebeta,mcar,misspec,nsim=1000,nx=1000){
 	print(cbind(avg.bias,se.bias,mse,
 		avg.width,se.width,cover.prob,cover.mcerror,mir,avg.rtime))
 
-	
-	##NB start here 6/18/19!!!
-	#need to check on formula for MSE: should it be bias+avg.var^2? Or avg(bias^2+var_i), where need var_i for each sim 
-	#mse=(bias-truebeta)^2+(apply(bias,2,var.na)/sum.not.na(bias))
-	
+
+
 	#test if bias is different from zero if there are enough observations
 	#ttest=function(x){return(t.test(x,mu=0)$p.value)}
 	#testbias=rep(NA,7)
@@ -846,6 +843,3 @@ dosims=function(truebeta,mcar,misspec,nsim=1000,nx=1000){
 	stopCluster(cl)
 	registerDoSEQ()
 }
-
-#NB just for testing
-#dosims(-0.5, 0, -1, nsim=2, nx=250)
