@@ -9,4 +9,4 @@ The "Simulations_run_other_methods" subfolder contains code to run the previous 
 
 The "ApplyToOPPERA" folder contains code to apply the methods to the OPPERA study. Together, these files create Table 2. 
 The "OPPERA_run_Bayes" subfolder contains code to apply the Bayesian method to the OPPERA study, i.e. the rightmost column in Table 2. This code can be run using "code_biometrics_JAGS_OPPERA.R"
-The "OPPERA_run_other_methods" subfolder contains code to apply the multiple imputation method and ad-hoc method to treat all missing data as censored. The files "do_mi_clin_rev.R", "do_mi_psych_rev.R", "do_mi_QST_rev.R" run these methods on the clinical, psych, and QST data, respectively. Necessary functions are included in "MI_binary.R", "read_data.R", and "read_triggers_biom_nb.R"
+The "OPPERA_run_other_methods" subfolder contains code to apply the multiple imputation method and ad-hoc method to treat all missing data as censored. The files "do_mi_clin_rev.R", "do_mi_psych_rev.R", "do_mi_QST_rev.R" run these methods on the clinical, psych, and QST data, respectively. Necessary functions are included in "MI_binary.R", "read_data.R", and "read_triggers_biom_nb.R".
