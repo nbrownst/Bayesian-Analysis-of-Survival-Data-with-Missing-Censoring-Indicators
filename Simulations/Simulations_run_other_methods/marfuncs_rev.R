@@ -487,7 +487,7 @@ dosims=function(truebeta,mcar,misspec,nsim=1000,nx=1000){
 		return(sum(!is.na(x)))
 	}
 	
-	#from SIM get adjusted bias and such, same as VB
+	#from SIM
 	avg.bias=round(apply(bias,2,mean.na),4)
 	se.bias=round(sqrt(apply(bias,2,var.na)/sum.not.na(bias)),4)
 	avg.width=round(apply(width,2,mean.na),4)
